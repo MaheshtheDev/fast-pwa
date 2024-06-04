@@ -4,10 +4,12 @@ A fast PWA template for Next.js.
 This template is comes with the following features:
 
 - [x] PWA Support
-- [ ] Offline Support
-- [ ] Push Notifications for IOS and Android
 - [x] TypeScript
 - [x] Tailwind CSS
+- [ ] Offline Support
+- [ ] Push Notifications for IOS and Android
+- [ ] hook if PWA installed or not
+
 
 ## Getting Started
 
