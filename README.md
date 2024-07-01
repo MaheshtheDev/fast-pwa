@@ -8,7 +8,7 @@ This template is comes with the following features:
 - [x] Tailwind CSS
 - [ ] Offline Support
 - [ ] Push Notifications for IOS and Android
-- [ ] hook if PWA installed or not
+- [x] hook if PWA installed or not
 
 
 ## Getting Started

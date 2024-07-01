@@ -1,19 +1,37 @@
-import Image from "next/image";
+"use client";
+
+import useIsPWAInstalled from "@/lib/hooks/useIsPWAInstalled";
 
 export default function Home() {
+  const isInstalled = useIsPWAInstalled();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
+    <main className={"flex min-h-screen flex-col "}>
+      <header className="text-4xl text-blue-500 font-bold text-center py-4">
+        fast PWA
+      </header>
+      <div className="mx-auto py-1">
+        <p>building PWA has never been easier</p>
+        <section className="my-2 text-center">
+          <h2 className="text-lg font-semibold">Features</h2>
+          <ul className="list-none flex gap-2 justify-around">
+            <li>PWA</li>
+            <li>TailwindCSS</li>
+            <li>Next.js</li>
+          </ul>
+        </section>
+        <section>
+          <h2 className="text-lg font-semibold">References</h2>
+          <div>
+            <p>More About PWA</p>
+          </div>
+        </section>
+        <section className="my-4">
+          <p>
+            btw, This Web App is{" "}
+            <span className="text-blue-400 font-semibold">{isInstalled ? "PWA App" : "Not PWA App"}</span>
+          </p>
+        </section>
       </div>
-
-      <div>
-        <h2>Fast PWA</h2>
-      </div>
-
     </main>
   );
 }
