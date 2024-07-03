@@ -6,7 +6,7 @@ This template is comes with the following features:
 - [x] PWA Support
 - [x] TypeScript
 - [x] Tailwind CSS
-- [ ] Offline Support
+- [x] Offline Support
 - [ ] Push Notifications for IOS and Android
 - [x] hook if PWA installed or not
 
