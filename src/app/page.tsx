@@ -1,9 +1,10 @@
 "use client";
 
-import useIsPWAInstalled from "@/lib/hooks/useIsPWAInstalled";
+import { useIsAppOffline, useIsPWAInstalled } from "@/lib/hooks";
 
 export default function Home() {
   const isInstalled = useIsPWAInstalled();
+  const isAppOffline = useIsAppOffline();
   return (
     <main className={"flex min-h-screen flex-col "}>
       <header className="text-4xl text-blue-500 font-bold text-center py-4">
@@ -29,6 +30,10 @@ export default function Home() {
           <p>
             btw, This Web App is{" "}
             <span className="text-blue-400 font-semibold">{isInstalled ? "PWA App" : "Not PWA App"}</span>
+          </p>
+          <p>
+            And, This Web App is{" "}
+            <span className="text-blue-400 font-semibold">{isAppOffline ? "Offline" : "Online"}</span>
           </p>
         </section>
       </div>

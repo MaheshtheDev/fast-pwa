@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useIsPWAInstalled = () => {
+export const useIsPWAInstalled = () => {
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
@@ -28,4 +28,3 @@ const useIsPWAInstalled = () => {
   return isInstalled;
 };
 
-export default useIsPWAInstalled;
